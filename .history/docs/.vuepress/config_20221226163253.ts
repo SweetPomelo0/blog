@@ -8,7 +8,7 @@ import dayjs from "dayjs";
 import baiduCode from "./config/baiduCode"; // 百度统计hm码
 import htmlModules from "./config/htmlModules"; // 自定义插入的html块
 
-const DOMAIN_NAME = ""; // 域名 (不带https) ⚠️这里不写网址不能使用插件-设置sitemap参数
+const DOMAIN_NAME = ""; // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}`; // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
@@ -30,15 +30,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 导航配置
     nav: [
       { text: "首页", link: "/" },
-      // {
-      //   text: "文章",
-      //   link: "/web/", //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
-      //   // items: [
-      //   //   { text: "前端", link: "/" },
-      //   //   { text: "后端", link: "/" },
-      //   //   { text: "基础", link: "/" },
-      //   // ],
-      // },
+      {
+        text: "文章",
+        link: "/web/", //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
+        // items: [
+        //   { text: "前端", link: "/" },
+        //   { text: "后端", link: "/" },
+        //   { text: "基础", link: "/" },
+        // ],
+      },
       { text: "关于", link: "/about/" },
       { text: "标签", link: "/tags/" },
       { text: "归档", link: "/archives/" },
@@ -116,12 +116,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       link: "https://github.com/SweetPomelo0", // 可选的
     },
 
-    // // 博主信息 (显示在首页侧边栏)
-    // blogger: {
-    //   avatar: "/img/avatar.jpg",
-    //   name: "栗哈哈",
-    //   slogan: "你可以成为任何你想成为的人",
-    // },
+    // 博主信息 (显示在首页侧边栏)
+    blogger: {
+      avatar: "/img/avatar.jpg",
+      name: "栗哈哈",
+      slogan: "你可以成为任何你想成为的人",
+    },
 
     // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
     social: {
@@ -189,12 +189,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
   // 插件配置
   plugins: <UserPlugins>[
-    // [
-    //   "sitemap", // 网站地图
-    //   {
-    //     hostname: WEB_SITE,
-    //   },
-    // ],
+    [
+      "sitemap", // 网站地图
+      {
+        hostname: WEB_SITE,
+      },
+    ],
 
     "vuepress-plugin-baidu-autopush", // 百度自动推送
 
