@@ -84,7 +84,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // pageStyle: "line", // 页面风格，可选值：'card'卡片 | 'line' 线（未设置bodyBgImg时才生效）， 默认'card'。 说明：card时背景显示灰色衬托出卡片样式，line时背景显示纯色，并且部分模块带线条边框
 
     bodyBgImg: [
-      "/img/bg99.jpeg",
+      // 'https://w.wallhaven.cc/full/jx/wallhaven-jx5r6w.jpg',
+      "https://w.wallhaven.cc/full/rr/wallhaven-rrdz37.png",
       // "/img/bg1.jpg",
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
     bodyBgImgOpacity: 0.8, // body背景图透明度，选值 0.1~1.0, 默认0.5
